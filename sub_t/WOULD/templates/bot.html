@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bot Educativo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script defer src="{{ url_for('static', filename='bot.js') }}"></script>
+</head>
+<body data-vista="vista1"> <!-- Cambia vista1 por vista2, vista3, etc. -->
+
+  <!-- Contenedor del Bot -->
+  <div id="bot-container">
+    <div id="bot-avatar">
+      <img id="avatar-img" src="{{ url_for('static', filename='avatar.png') }}" alt="Avatar del Bot">
+      <div id="boca-bot"></div> <!-- Boca animada -->
+    </div>
+    
+
+    <!-- Caja de texto del bot -->
+    <div id="bot-text-box">¡Hola! Estoy listo para ayudarte.</div>
+
+    <!-- Controles del bot -->
+    <div id="bot-controls">
+      <button id="btn-es" title="Español">ES</button>
+      <button id="btn-en" title="Inglés">EN</button>
+
+      <!-- Selector de voz -->
+      <select id="voice-select" title="Elegir voz del bot">
+        <option value="">Voz predeterminada</option>
+        <!-- Las opciones se llenan dinámicamente desde el JS -->
+      </select>
+
+      <button id="toggle-sound" title="Sonido">🔊</button>
+      <button id="toggle-visibility" title="Minimizar/Expandir">🔽</button>
+    </div>
+  </div>
+
+  <!-- Contenido de la lección -->
+</body>
+</html>

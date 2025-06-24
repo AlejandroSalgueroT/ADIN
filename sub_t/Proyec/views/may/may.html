@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAYBE - Misiones Interactivas</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HUD de Videojuego -->
+    <nav class="hud">
+        <div class="hud-logo" aria-label="Logo RTN">RTN</div>
+        <div class="hud-user">
+            <img src="../../img/avatar.jpg" alt="Avatar de usuario" class="avatar-img" loading="lazy">
+            <span id="hud-username">Jugador</span>
+        </div>
+    </nav>
+    
+
+    <!-- Chatbox tipo NPC -->
+    <div id="avatar-chatbox" aria-live="polite">
+        <div id="thought-bubble" style="display:none;"></div>
+    </div>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <h1 class="titulo">MAYBE</h1>
+    </header>
+
+    <!-- TEORÍA SOBRE "MAY" -->
+    <section class="intro-may teoria-may">
+        <h2>Teoría: Usos de <span class="resalta">may</span></h2>
+
+        <br>
+        <br>
+        <!-- MAY SIMPLE -->
+        <article class="teoria-seccion">
+            <h3>1. <span class="resalta">May</span> Simple</h3>
+            <p>
+                Se utiliza para expresar posibilidad o permiso en presente o futuro. Va seguido de verbo base sin "to".
+            </p>
+            <ul>
+                <li><strong>Posibilidad:</strong> It may rain later. <span class="traduccion">(Puede que llueva más
+                        tarde.)</span></li>
+                <li><strong>Permiso:</strong> You may enter the room. <span class="traduccion">(Puedes entrar en la
+                        sala.)</span></li>
+            </ul>
+        </article>
+        <!-- MAY CONTINUOUS -->
+        <article class="teoria-seccion">
+            <h3>2. <span class="resalta">May be</span> + Gerundio (Continuous)</h3>
+            <p>
+                Expresa posibilidad en curso. Se forma con <em>may be</em> + verbo con terminación <em>-ing</em>.
+            </p>
+            <ul>
+                <li><strong>Acción en progreso:</strong> She may be working now. <span class="traduccion">(Puede que
+                        ella esté trabajando ahora.)</span></li>
+            </ul>
+        </article>
+        <!-- MAY PERFECT -->
+        <article class="teoria-seccion">
+            <h3>3. <span class="resalta">May have</span> + Participio (Perfect)</h3>
+            <p>
+                Indica posibilidad sobre un evento completado en el pasado. Se forma con <em>may have</em> + participio
+                pasado.
+            </p>
+            <ul>
+                <li><strong>Posibilidad pasada:</strong> They may have left early. <span class="traduccion">(Puede que
+                        se hayan ido temprano.)</span></li>
+            </ul>
+        </article>
+        <!-- MAY PERFECT CONTINUOUS -->
+        <article class="teoria-seccion">
+            <h3>4. <span class="resalta">May have been</span> + Gerundio (Perfect Continuous)</h3>
+            <p>
+                Expresa posibilidad de acción continua terminada hace poco. Se forma con <em>may have been</em> + verbo
+                <em>-ing</em>.
+            </p>
+            <ul>
+                <li><strong>Acción continua pasada:</strong> He may have been sleeping when you called. <span
+                        class="traduccion">(Puede que él haya estado durmiendo cuando llamaste.)</span></li>
+            </ul>
+        </article>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="pie-superior">
+            <p>Página realizada y preparada mediante prácticas educativas</p>
+            <p>#RTN20</p>
+            <div class="logo-footer" aria-label="Logo RTN">RTN</div>
+
+            <!-- Botones -->
+            <!-- Botones -->
+            <div class="intro-botones">
+                <a href="/views/Simple/index_Simple.html" class="boton">Ir a Misiones</a>
+                <a href="/views/Logros/logros.html" class="boton">Ver Logros</a>
+                <a href="#" class="boton">Volver al inicio</a>
+            
+
+            <br>
+            <br>
+
+            <!-- Contactos debajo de los botones -->
+            <address class="contacto">
+                <p>Contact us at:</p>
+                <p><a href="mailto:rtncontact@gmail.com">📧 rtncontact@gmail.com</a></p>
+                <p>📸 rtn_school</p>
+                <p>📍 Ciudad-Colegio</p>
+            </address>
+
+
+        </div>
+        </div>
+
+        <p class="derechos">© RTN 2025. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/three.min.js"></script>
+    <script src="../../js/GLTFLoader.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/misiones.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" data-vista="vista5">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplos del verbo "Would" en los Condicionales</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body data-vista="vista5">
+
+<header>
+  <h1>Ejemplos con el Verbo Modal <span class="highlight">"WOULD"</span></h1>
+  <div class="idioma-switch">
+  </div>
+</header>
+
+<div class="container">
+  <section class="explicacion">
+    <h2>Ejemplos por Tiempos Condicionales</h2>
+
+    <!-- SIMPLE CONDITIONAL -->
+    <h3>1. Simple Conditional</h3>
+    <ul class="ejemplos">
+      <li data-en="I would eat pizza." data-es="Yo comería pizza.">
+        <span class="ingles">I would eat pizza.</span> — <span class="espanol">Yo comería pizza.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="She would dance at the party." data-es="Ella bailaría en la fiesta.">
+        <span class="ingles">She would dance at the party.</span> — <span class="espanol">Ella bailaría en la fiesta.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="They would travel next summer." data-es="Ellos viajarían el próximo verano.">
+        <span class="ingles">They would travel next summer.</span> — <span class="espanol">Ellos viajarían el próximo verano.</span>
+        <button class="play-example">🔊</button>
+      </li>
+    </ul>
+
+    <!-- CONDITIONAL CONTINUOUS -->
+    <h3>2. Conditional Continuous</h3>
+    <ul class="ejemplos">
+      <li data-en="I would be working now." data-es="Yo estaría trabajando ahora.">
+        <span class="ingles">I would be working now.</span> — <span class="espanol">Yo estaría trabajando ahora.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="He would be sleeping during the meeting." data-es="Él estaría durmiendo durante la reunión.">
+        <span class="ingles">He would be sleeping during the meeting.</span> — <span class="espanol">Él estaría durmiendo durante la reunión.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="We would be studying for the test." data-es="Estaríamos estudiando para el examen.">
+        <span class="ingles">We would be studying for the test.</span> — <span class="espanol">Estaríamos estudiando para el examen.</span>
+        <button class="play-example">🔊</button>
+      </li>
+    </ul>
+
+    <!-- PERFECT CONDITIONAL -->
+    <h3>3. Perfect Conditional</h3>
+    <ul class="ejemplos">
+      <li data-en="I would have finished the project." data-es="Yo habría terminado el proyecto.">
+        <span class="ingles">I would have finished the project.</span> — <span class="espanol">Yo habría terminado el proyecto.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="She would have called you." data-es="Ella te habría llamado.">
+        <span class="ingles">She would have called you.</span> — <span class="espanol">Ella te habría llamado.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="They would have gone to the concert." data-es="Ellos habrían ido al concierto.">
+        <span class="ingles">They would have gone to the concert.</span> — <span class="espanol">Ellos habrían ido al concierto.</span>
+        <button class="play-example">🔊</button>
+      </li>
+    </ul>
+
+    <!-- PERFECT CONDITIONAL CONTINUOUS -->
+    <h3>4. Perfect Conditional Continuous</h3>
+    <ul class="ejemplos">
+      <li data-en="I would have been studying all night." data-es="Habría estado estudiando toda la noche.">
+        <span class="ingles">I would have been studying all night.</span> — <span class="espanol">Habría estado estudiando toda la noche.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="He would have been working for hours." data-es="Él habría estado trabajando durante horas.">
+        <span class="ingles">He would have been working for hours.</span> — <span class="espanol">Él habría estado trabajando durante horas.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-en="They would have been traveling since morning." data-es="Ellos habrían estado viajando desde la mañana.">
+        <span class="ingles">They would have been traveling since morning.</span> — <span class="espanol">Ellos habrían estado viajando desde la mañana.</span>
+        <button class="play-example">🔊</button>
+      </li>
+    </ul>
+  </section>
+
+  <div class="nav-buttons">
+    <a href="{{ url_for('index') }}">⟵ Volver al inicio</a>
+  </div>
+</div>
+
+{% include 'bot.html' %}
+<script src="{{ url_for('static', filename='bot.js') }}"></script>
+</body>
+</html>

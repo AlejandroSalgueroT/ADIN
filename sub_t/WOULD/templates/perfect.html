@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es" data-vista="vista3">
+<head>
+  <meta charset="UTF-8">
+  <title>Would en Perfect Conditional</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <style>
+    .content { display: none; }
+  </style>
+</head>
+<body data-vista="vista3">
+
+<header>
+  <h1>Verbo Modal <span class="highlight">"WOULD"</span> en Perfect Conditional</h1>
+</header>
+
+<div class="container">
+
+  <section class="explicacion">
+    <h2>Explicación</h2>
+    <p>El <b>Condicional Perfecto</b> con <b>WOULD</b> se utiliza para hablar de acciones que habrían ocurrido en el pasado bajo ciertas condiciones.</p>
+    <p><b>Estructura:</b> Pronombre + WOULD + HAVE + verbo en participio</p>
+
+    <h3>Ejemplos:</h3>
+    <ul class="ejemplos ejemplo">
+      <li data-es="Yo habría viajado a Japón." data-en="I would have traveled to Japan.">
+        <span class="ingles">I would have traveled to Japan.</span> — 
+        <span class="espanol">Yo habría viajado a Japón.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Ella te habría ayudado." data-en="She would have helped you.">
+        <span class="ingles">She would have helped you.</span> — 
+        <span class="espanol">Ella te habría ayudado.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Nosotros habríamos comprado una casa." data-en="We would have bought a house.">
+        <span class="ingles">We would have bought a house.</span> — 
+        <span class="espanol">Nosotros habríamos comprado una casa.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Ellos nos habrían visitado." data-en="They would have visited us.">
+        <span class="ingles">They would have visited us.</span> — 
+        <span class="espanol">Ellos nos habrían visitado.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Él habría llamado a su amigo." data-en="He would have called his friend.">
+        <span class="ingles">He would have called his friend.</span> — 
+        <span class="espanol">Él habría llamado a su amigo.</span>
+        <button class="play-example">🔊</button>
+      </li>
+    </ul>
+  </section>
+
+  <form method="POST">
+
+    <button type="button" class="toggle-btn" onclick="toggleContent('act1')">
+      Actividad 1: Verdadero o Falso
+    </button>
+    <div id="act1" class="content">
+      <div class="question">
+        1. "I would have travel to Japan" es correcto.<br>
+        <label><input type="radio" name="q1" value="Verdadero"> Verdadero</label>
+        <label><input type="radio" name="q1" value="Falso"> Falso</label>
+      </div>
+      <div class="question">
+        2. "She would have helped you" es correcto.<br>
+        <label><input type="radio" name="q2" value="Verdadero"> Verdadero</label>
+        <label><input type="radio" name="q2" value="Falso"> Falso</label>
+      </div>
+      <div class="question">
+        3. "They would have visited us" es correcto.<br>
+        <label><input type="radio" name="q3" value="Verdadero"> Verdadero</label>
+        <label><input type="radio" name="q3" value="Falso"> Falso</label>
+      </div>
+    </div>
+
+    <button type="button" class="toggle-btn" onclick="toggleContent('act2')">
+      Actividad 2: Completa los espacios
+    </button>
+    <div id="act2" class="content">
+      <div class="question">
+        1. I would have ________ to Spain. <input type="text" name="blank1">
+      </div>
+      <div class="question">
+        2. She would have ________ you. <input type="text" name="blank2">
+      </div>
+      <div class="question">
+        3. They would have ________ us. <input type="text" name="blank3">
+      </div>
+      <div class="question">
+        4. He would have ________ his friend. <input type="text" name="blank4">
+      </div>
+      <div class="question">
+        5. We would have ________ a house. <input type="text" name="blank5">
+      </div>
+    </div>
+
+    <button type="button" class="toggle-btn" onclick="toggleContent('act3')">
+      Actividad 3: Selección múltiple
+    </button>
+    <div id="act3" class="content">
+      <div class="question">
+        1. I would have <select name="mc1">
+          <option value="">Seleccione</option>
+          <option value="traveled">traveled</option>
+          <option value="travel">travel</option>
+          <option value="traveling">traveling</option>
+        </select> to Japan.
+      </div>
+      <div class="question">
+        2. She would have <select name="mc2">
+          <option value="">Seleccione</option>
+          <option value="helped">helped</option>
+          <option value="help">help</option>
+          <option value="helping">helping</option>
+        </select> you.
+      </div>
+      <div class="question">
+        3. They would have <select name="mc3">
+          <option value="">Seleccione</option>
+          <option value="visited">visited</option>
+          <option value="visit">visit</option>
+          <option value="visiting">visiting</option>
+        </select> us.
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Enviar todas las respuestas</button>
+  </form>
+
+  {% if score is not none %}
+    <div class="resultado">Tu puntaje es: {{ score }} de {{ total }}</div>
+  {% endif %}
+
+  <div class="nav-buttons">
+    <a href="{{ url_for('continuous') }}">⬅ Anterior</a>
+    <a href="{{ url_for('perfect_continuous') }}">Siguiente ➔</a>
+  </div>
+</div>
+
+{% include 'bot.html' %}
+
+<script>
+function toggleContent(id) {
+  const c = document.getElementById(id);
+  c.style.display = c.style.display === "block" ? "none" : "block";
+}
+</script>
+
+<script src="{{ url_for('static', filename='bot.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" data-vista="vista1">
+<head>
+  <meta charset="UTF-8">
+  <title>Would en Simple Conditional</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <style>
+    .content { display: none; }
+  </style>
+</head>
+<body data-vista="vista1">
+
+<header>
+  <h1>Verbo Modal <span class="highlight">"WOULD"</span> en Simple Conditional</h1>
+</header>
+
+<div class="container">
+  <section class="explicacion">
+    <h2>Explicación</h2>
+    <p>El <b>Condicional Simple</b> con <b>WOULD</b> se usa para expresar:</p>
+    <ul>
+      <li>Acciones hipotéticas o imaginarias.</li>
+      <li>Ofrecer sugerencias o consejos.</li>
+      <li>Hablar de deseos o intenciones en situaciones irreales.</li>
+    </ul>
+    <p><b>Estructura:</b> Pronombre + WOULD + verbo base</p>
+
+    <h3>Ejemplos:</h3>
+    <ul class="ejemplos ejemplo">
+      <li data-es="Yo viajaría a Japón." data-en="I would travel to Japan.">
+        <span class="ingles">I would travel to Japan.</span> — <span class="espanol">Yo viajaría a Japón.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Ella te ayudaría." data-en="She would help you.">
+        <span class="ingles">She would help you.</span> — <span class="espanol">Ella te ayudaría.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Nosotros compraríamos una casa." data-en="We would buy a house.">
+        <span class="ingles">We would buy a house.</span> — <span class="espanol">Nosotros compraríamos una casa.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Ellos nos visitarían." data-en="They would visit us.">
+        <span class="ingles">They would visit us.</span> — <span class="espanol">Ellos nos visitarían.</span>
+        <button class="play-example">🔊</button>
+      </li>
+      <li data-es="Él llamaría a su amigo." data-en="He would call his friend.">
+        <span class="ingles">He would call his friend.</span> — <span class="espanol">Él llamaría a su amigo.</span>
+        <button class="play-example">🔊</button>
+      </li>
+    </ul>
+  </section>
+
+  <form method="POST">
+    <!-- Actividad 1 -->
+    <button type="button" class="toggle-btn" onclick="toggleContent('act1')">Actividad 1: Verdadero o Falso</button>
+    <div id="act1" class="content">
+      <div class="question">
+        1. "I would travels to Japan" es correcto.<br>
+        <label><input type="radio" name="q1" value="Verdadero"> Verdadero</label>
+        <label><input type="radio" name="q1" value="Falso"> Falso</label>
+      </div>
+      <div class="question">
+        2. "She would help you" es correcto.<br>
+        <label><input type="radio" name="q2" value="Verdadero"> Verdadero</label>
+        <label><input type="radio" name="q2" value="Falso"> Falso</label>
+      </div>
+      <div class="question">
+        3. "They would visiting us" es correcto.<br>
+        <label><input type="radio" name="q3" value="Verdadero"> Verdadero</label>
+        <label><input type="radio" name="q3" value="Falso"> Falso</label>
+      </div>
+    </div>
+
+    <!-- Actividad 2 -->
+    <button type="button" class="toggle-btn" onclick="toggleContent('act2')">Actividad 2: Completa los espacios</button>
+    <div id="act2" class="content">
+      <div class="question">1. I ________ travel to Spain. <input type="text" name="blank1"></div>
+      <div class="question">2. She ________ help you. <input type="text" name="blank2"></div>
+      <div class="question">3. They ________ visit us. <input type="text" name="blank3"></div>
+      <div class="question">4. He ________ call his friend. <input type="text" name="blank4"></div>
+      <div class="question">5. We ________ buy a house. <input type="text" name="blank5"></div>
+    </div>
+
+    <!-- Actividad 3 -->
+    <button type="button" class="toggle-btn" onclick="toggleContent('act3')">Actividad 3: Selección múltiple</button>
+    <div id="act3" class="content">
+      <div class="question">1. I ________ (viajaría) to Japan if I had money.
+        <select name="mc1">
+          <option value="">Seleccione</option>
+          <option value="would travel">would travel</option>
+          <option value="will travel">will travel</option>
+          <option value="travels">travels</option>
+        </select>
+      </div>
+      <div class="question">2. She ________ (ayudaría) you.
+        <select name="mc2">
+          <option value="">Seleccione</option>
+          <option value="would help">would help</option>
+          <option value="helped">helped</option>
+          <option value="helps">helps</option>
+        </select>
+      </div>
+      <div class="question">3. They ________ (nos visitarían).
+        <select name="mc3">
+          <option value="">Seleccione</option>
+          <option value="would visit">would visit</option>
+          <option value="visits">visits</option>
+          <option value="visit">visit</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Enviar todas las respuestas</button>
+  </form>
+
+  {% if score is not none %}
+    <div class="resultado">Tu puntaje es: {{ score }} de {{ total }}</div>
+  {% endif %}
+
+  <div class="nav-buttons">
+    <a href="{{ url_for('index') }}">Inicio</a>
+    <a href="{{ url_for('continuous') }}">Siguiente ➔</a>
+  </div>
+</div>
+
+{% include 'bot.html' %}
+
+<script>
+function toggleContent(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+</script>
+<script src="{{ url_for('static', filename='bot.js') }}"></script>
+</body>
+</html>
+
+

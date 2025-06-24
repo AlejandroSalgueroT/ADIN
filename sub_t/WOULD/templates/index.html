@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Proyecto WOULD{% endblock %}
+
+{% block header %}
+Proyecto de Inglés - Verbo Modal "WOULD"
+{% endblock %}
+
+{% block content %}
+<h2>Seleccione la lección:</h2>
+<ul class="menu">
+    <li><a href="{{ url_for('simple') }}">Would Simple Conditional</a></li>
+    <li><a href="{{ url_for('continuous') }}">Would Continuous Conditional</a></li>
+    <li><a href="{{ url_for('perfect') }}">Would Perfect Conditional</a></li>
+    <li><a href="{{ url_for('perfect_continuous') }}">Would Perfect Continuous Conditional</a></li>
+    <li><a href="{{ url_for('pronunciaciones') }}">Pronunciaciones</a></li>
+</ul>
+{% endblock %}
+
