@@ -14,7 +14,48 @@ def index():
 def serve_img(filename):
     return send_from_directory('img', filename)
 
-# Servir archivos de las subcarpetas específicas
+# Servir archivos CSS y JS específicos de subcarpetas
+@app.route('/sub_t/MUST/<path:filename>')
+def serve_must_files(filename):
+    return send_from_directory('sub_t/MUST', filename)
+
+@app.route('/sub_t/might/<path:filename>')
+def serve_might_files(filename):
+    return send_from_directory('sub_t/might', filename)
+
+@app.route('/sub_t/Should/<path:filename>')
+def serve_should_files(filename):
+    return send_from_directory('sub_t/Should', filename)
+
+@app.route('/sub_t/WOULD/<path:filename>')
+def serve_would_files(filename):
+    return send_from_directory('sub_t/WOULD', filename)
+
+@app.route('/sub_t/Verbos/<path:filename>')
+def serve_verbos_files(filename):
+    return send_from_directory('sub_t/Verbos', filename)
+
+@app.route('/sub_t/Proyec/<path:filename>')
+def serve_proyec_files(filename):
+    return send_from_directory('sub_t/Proyec', filename)
+
+@app.route('/sub_t/TenSe May/<path:filename>')
+def serve_tense_may_files(filename):
+    return send_from_directory('sub_t/TenSe May', filename)
+
+@app.route('/sub_t/Tenses Future/<path:filename>')
+def serve_tenses_future_files(filename):
+    return send_from_directory('sub_t/Tenses Future', filename)
+
+@app.route('/sub_t/Tenses past/<path:filename>')
+def serve_tenses_past_files(filename):
+    return send_from_directory('sub_t/Tenses past', filename)
+
+@app.route('/sub_t/Tenses_Present/<path:filename>')
+def serve_tenses_present_files(filename):
+    return send_from_directory('sub_t/Tenses_Present', filename)
+
+# Servir archivos generales de sub_t
 @app.route('/sub_t/<path:filepath>')
 def serve_sub_t(filepath):
     return send_from_directory('sub_t', filepath)
