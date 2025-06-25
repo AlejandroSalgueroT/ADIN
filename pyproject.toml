@@ -1,0 +1,3 @@
+# Disable Poetry detection
+[build-system]
+requires = ["setuptools", "wheel"]
